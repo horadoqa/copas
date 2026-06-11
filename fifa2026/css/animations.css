@@ -1,0 +1,606 @@
+/* ==================================================
+   FIFA WORLD CUP 2026 - ANIMATIONS.CSS
+   Animações, Transições e Efeitos Visuais
+   ================================================== */
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+   ================================================== */
+
+:root {
+    --animation-fast: 0.3s;
+    --animation-normal: 0.6s;
+    --animation-slow: 1s;
+    --animation-extra: 1.5s;
+}
+
+/* ==================================================
+   FADE IN
+   ================================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* ==================================================
+   FADE UP
+   ================================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* ==================================================
+   FADE DOWN
+   ================================================== */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-down {
+    animation: fadeDown 0.8s ease forwards;
+}
+
+/* ==================================================
+   FADE LEFT
+   ================================================== */
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-left {
+    animation: fadeLeft 0.8s ease forwards;
+}
+
+/* ==================================================
+   FADE RIGHT
+   ================================================== */
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-right {
+    animation: fadeRight 0.8s ease forwards;
+}
+
+/* ==================================================
+   HERO ANIMATION
+   ================================================== */
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.hero {
+    animation: heroZoom 12s ease-in-out infinite alternate;
+}
+
+/* ==================================================
+   FLOATING EFFECT
+   ================================================== */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* ==================================================
+   PULSE
+   ================================================== */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* ==================================================
+   GLOW
+   ================================================== */
+
+@keyframes glow {
+
+    0% {
+        box-shadow:
+            0 0 0 rgba(255,255,255,0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(255,255,255,0.25);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 rgba(255,255,255,0);
+    }
+}
+
+.glow {
+    animation: glow 2.5s infinite;
+}
+
+/* ==================================================
+   SHIMMER
+   ================================================== */
+
+@keyframes shimmer {
+
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.05) 25%,
+            rgba(255,255,255,0.15) 50%,
+            rgba(255,255,255,0.05) 75%
+        );
+
+    background-size: 1000px 100%;
+
+    animation: shimmer 2s infinite linear;
+}
+
+/* ==================================================
+   BOTÕES
+   ================================================== */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.35),
+            transparent
+        );
+
+    transition: 0.8s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* ==================================================
+   GAME CARD HOVER
+   ================================================== */
+
+.game-card {
+    position: relative;
+}
+
+.game-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00c896,
+            #2196f3,
+            #fbc531
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: 0.4s ease;
+}
+
+.game-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* ==================================================
+   HOST CARD HOVER
+   ================================================== */
+
+.host-card img {
+    transition: transform 0.6s ease;
+}
+
+.host-card:hover img {
+    transform: scale(1.08);
+}
+
+/* ==================================================
+   COUNTDOWN EFFECT
+   ================================================== */
+
+.countdown {
+    animation: pulse 3s infinite;
+}
+
+/* ==================================================
+   STATS EFFECT
+   ================================================== */
+
+.stat-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.stat-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 35px rgba(0,0,0,0.25);
+}
+
+/* ==================================================
+   NAV LINK ANIMATION
+   ================================================== */
+
+.nav a {
+    position: relative;
+}
+
+.nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #fbc531;
+
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ==================================================
+   BADGE EFFECT
+   ================================================== */
+
+.badge {
+    animation: badgePulse 3s infinite;
+}
+
+@keyframes badgePulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ==================================================
+   LOADER
+   ================================================== */
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    animation: rotate 1s linear infinite;
+}
+
+/* ==================================================
+   BACK TO TOP
+   ================================================== */
+
+.back-to-top {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+/* ==================================================
+   REVEAL ON SCROLL
+   ================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==================================================
+   REVEAL LEFT
+   ================================================== */
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ==================================================
+   REVEAL RIGHT
+   ================================================== */
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all 0.8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ==================================================
+   REVEAL SCALE
+   ================================================== */
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.8s ease;
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ==================================================
+   STAGGER DELAYS
+   ================================================== */
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+.delay-6 {
+    animation-delay: 0.6s;
+}
+
+/* ==================================================
+   GLASS SHINE
+   ================================================== */
+
+.glass {
+    position: relative;
+    overflow: hidden;
+}
+
+.glass::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -150%;
+
+    width: 80px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.12),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: 1s;
+}
+
+.glass:hover::before {
+    left: 150%;
+}
+
+/* ==================================================
+   HERO TITLE ENTRANCE
+   ================================================== */
+
+.hero h1 {
+    animation:
+        fadeUp 1s ease forwards;
+}
+
+.hero p {
+    animation:
+        fadeUp 1.3s ease forwards;
+}
+
+.hero-buttons {
+    animation:
+        fadeUp 1.6s ease forwards;
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        animation: none;
+    }
+
+    .glass::before {
+        display: none;
+    }
+}

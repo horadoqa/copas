@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário da Copa do Mundo FIFA 2026</title>
+
+    <meta name="description" content="Portal moderno para acompanhar o calendário, classificação, estatísticas e sedes da Copa do Mundo FIFA 2026.">
+    <meta name="keywords" content="Copa do Mundo 2026, FIFA 2026, calendário, jogos, classificação, futebol">
+    <meta name="author" content="Projeto FIFA 2026">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link rel="icon" href="assets/icons/favicon.png">
+    
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- HEADER -->
+    <!-- ========================================= -->
+
+    <header class="header glass">
+        <div class="container header-container">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">⚽</span>
+                <span class="logo-text">FIFA 2026</span>
+            </a>
+
+            <nav class="nav" id="navMenu">
+                <a href="#inicio">Início</a>
+                <a href="#jogos">Jogos</a>
+                <a href="#classificacao">Classificação</a>
+                <a href="#estatisticas">Estatísticas</a>
+                <a href="#sedes">Sedes</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button
+                    id="themeToggle"
+                    class="theme-toggle"
+                    aria-label="Alternar tema"
+                    title="Alternar tema">
+                    🌙
+                </button>
+
+                <button
+                    id="menuToggle"
+                    class="menu-toggle"
+                    aria-label="Abrir menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ========================================= -->
+    <!-- HERO -->
+    <!-- ========================================= -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                FIFA World Cup 2026
+            </span>
+
+            <h1>
+                Calendário da Copa do Mundo FIFA 2026
+            </h1>
+
+            <p>
+                Acompanhe todos os jogos, estatísticas,
+                classificação e informações das cidades-sede
+                do maior torneio de futebol do planeta.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#jogos" class="btn btn-primary">
+                    Ver Calendário
+                </a>
+
+                <a href="#estatisticas" class="btn btn-secondary">
+                    Estatísticas
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-scroll">
+            ↓
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- CONTADORES -->
+    <!-- ========================================= -->
+
+    <section class="countdown-section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contagem Regressiva</h2>
+                <p>Prepare-se para a maior competição do futebol mundial.</p>
+            </div>
+
+            <div class="countdown-grid">
+
+                <div class="countdown-card glass">
+
+                    <h3>Abertura do Mundial</h3>
+
+                    <div id="openingCountdown" class="countdown"></div>
+
+                </div>
+
+                <div class="countdown-card glass">
+
+                    <h3>Final da Copa</h3>
+
+                    <div id="finalCountdown" class="countdown"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- FILTROS -->
+    <!-- ========================================= -->
+
+    <section id="jogos" class="games-section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Calendário de Jogos</h2>
+                <p>Encontre rapidamente qualquer partida.</p>
+            </div>
+
+            <div class="filters glass">
+
+                <select id="phaseFilter">
+                    <option value="">Todas as Fases</option>
+                    <option value="Fase de Grupos">Fase de Grupos</option>
+                    <option value="16 Avos de Final">16 Avos de Final</option>
+                    <option value="Oitavas de Final">Oitavas de Final</option>
+                    <option value="Quartas de Final">Quartas de Final</option>
+                    <option value="Semifinais">Semifinais</option>
+                    <option value="Disputa do 3º Lugar">Disputa do 3º Lugar</option>
+                    <option value="Final">Final</option>
+                </select>
+
+                <select id="teamFilter">
+                    <option value="">Todas as Seleções</option>
+                </select>
+
+                <select id="cityFilter">
+                    <option value="">Todas as Cidades</option>
+                </select>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Pesquisar jogo..."
+                    aria-label="Pesquisar jogo"
+                >
+
+            </div>
+
+            <div id="gamesContainer" class="games-grid">
+
+                <!-- Cards carregados via JS -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- CLASSIFICAÇÃO -->
+    <!-- ========================================= -->
+
+    <section id="classificacao" class="standings-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Classificação</h2>
+
+                <p>
+                    Tabela dinâmica da fase de grupos.
+                </p>
+
+            </div>
+
+            <div class="table-container glass">
+
+                <table id="standingsTable">
+
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Seleção</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                            <th>Pts</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- ESTATÍSTICAS -->
+    <!-- ========================================= -->
+
+    <section id="estatisticas" class="stats-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Estatísticas do Torneio</h2>
+
+                <p>
+                    Indicadores gerais da competição.
+                </p>
+
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card glass">
+                    <h3>Total de Jogos</h3>
+                    <span id="totalGames">0</span>
+                </div>
+
+                <div class="stat-card glass">
+                    <h3>Total de Gols</h3>
+                    <span id="totalGoals">0</span>
+                </div>
+
+                <div class="stat-card glass">
+                    <h3>Média de Gols</h3>
+                    <span id="avgGoals">0</span>
+                </div>
+
+                <div class="stat-card glass">
+                    <h3>Seleção com Mais Gols</h3>
+                    <span id="topTeam">-</span>
+                </div>
+
+                <div class="stat-card glass">
+                    <h3>Artilheiro</h3>
+                    <span id="topScorer">-</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- SEDES -->
+    <!-- ========================================= -->
+
+    <section id="sedes" class="host-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Cidades-Sede</h2>
+
+                <p>
+                    Conheça os estádios e cidades da competição.
+                </p>
+
+            </div>
+
+            <div id="hostCities" class="host-grid">
+
+                <!-- Carregado pelo JS -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-about">
+
+                    <h3>Copa do Mundo FIFA 2026</h3>
+
+                    <p>
+                        Portal demonstrativo criado para exibição do
+                        calendário, classificação, estatísticas e
+                        cidades-sede da Copa do Mundo FIFA 2026.
+                    </p>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <h4>Navegação</h4>
+
+                    <a href="#inicio">Início</a>
+                    <a href="#jogos">Jogos</a>
+                    <a href="#classificacao">Classificação</a>
+                    <a href="#estatisticas">Estatísticas</a>
+                    <a href="#sedes">Sedes</a>
+
+                </div>
+
+                <div class="footer-social">
+
+                    <h4>Redes Sociais</h4>
+
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">X / Twitter</a>
+                    <a href="#">YouTube</a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 FIFA World Cup Portal.
+                    Todos os direitos reservados.
+                </p>
+
+                <p>
+                    Desenvolvido com HTML5, CSS3 e JavaScript.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <!-- ========================================= -->
+
+    <button
+        id="backToTop"
+        class="back-to-top"
+        aria-label="Voltar ao topo">
+
+        ↑
+
+    </button>
+
+    <!-- ========================================= -->
+    <!-- LOADING -->
+    <!-- ========================================= -->
+
+    <div id="loadingOverlay" class="loading-overlay">
+
+        <div class="loader"></div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="js/theme.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/standings.js"></script>
+    <script src="js/statistics.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/hosts.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

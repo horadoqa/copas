@@ -1,0 +1,148 @@
+[
+  {
+    "grupo": "A",
+    "selecao": "México",
+    "jogos": 3,
+    "vitorias": 2,
+    "empates": 1,
+    "derrotas": 0,
+    "golsPro": 5,
+    "golsContra": 2,
+    "saldo": 3,
+    "pontos": 7
+  },
+  {
+    "grupo": "A",
+    "selecao": "Alemanha",
+    "jogos": 3,
+    "vitorias": 2,
+    "empates": 0,
+    "derrotas": 1,
+    "golsPro": 6,
+    "golsContra": 3,
+    "saldo": 3,
+    "pontos": 6
+  },
+  {
+    "grupo": "A",
+    "selecao": "Japão",
+    "jogos": 3,
+    "vitorias": 1,
+    "empates": 1,
+    "derrotas": 1,
+    "golsPro": 3,
+    "golsContra": 4,
+    "saldo": -1,
+    "pontos": 4
+  },
+  {
+    "grupo": "A",
+    "selecao": "Canadá",
+    "jogos": 3,
+    "vitorias": 0,
+    "empates": 0,
+    "derrotas": 3,
+    "golsPro": 1,
+    "golsContra": 6,
+    "saldo": -5,
+    "pontos": 0
+  },
+
+  {
+    "grupo": "B",
+    "selecao": "Brasil",
+    "jogos": 3,
+    "vitorias": 3,
+    "empates": 0,
+    "derrotas": 0,
+    "golsPro": 8,
+    "golsContra": 1,
+    "saldo": 7,
+    "pontos": 9
+  },
+  {
+    "grupo": "B",
+    "selecao": "França",
+    "jogos": 3,
+    "vitorias": 2,
+    "empates": 0,
+    "derrotas": 1,
+    "golsPro": 6,
+    "golsContra": 3,
+    "saldo": 3,
+    "pontos": 6
+  },
+  {
+    "grupo": "B",
+    "selecao": "Nigéria",
+    "jogos": 3,
+    "vitorias": 1,
+    "empates": 0,
+    "derrotas": 2,
+    "golsPro": 3,
+    "golsContra": 6,
+    "saldo": -3,
+    "pontos": 3
+  },
+  {
+    "grupo": "B",
+    "selecao": "Austrália",
+    "jogos": 3,
+    "vitorias": 0,
+    "empates": 0,
+    "derrotas": 3,
+    "golsPro": 1,
+    "golsContra": 8,
+    "saldo": -7,
+    "pontos": 0
+  },
+
+  {
+    "grupo": "C",
+    "selecao": "Argentina",
+    "jogos": 3,
+    "vitorias": 2,
+    "empates": 1,
+    "derrotas": 0,
+    "golsPro": 6,
+    "golsContra": 2,
+    "saldo": 4,
+    "pontos": 7
+  },
+  {
+    "grupo": "C",
+    "selecao": "Espanha",
+    "jogos": 3,
+    "vitorias": 2,
+    "empates": 0,
+    "derrotas": 1,
+    "golsPro": 5,
+    "golsContra": 3,
+    "saldo": 2,
+    "pontos": 6
+  },
+  {
+    "grupo": "C",
+    "selecao": "Marrocos",
+    "jogos": 3,
+    "vitorias": 1,
+    "empates": 0,
+    "derrotas": 2,
+    "golsPro": 3,
+    "golsContra": 5,
+    "saldo": -2,
+    "pontos": 3
+  },
+  {
+    "grupo": "C",
+    "selecao": "Coreia do Sul",
+    "jogos": 3,
+    "vitorias": 0,
+    "empates": 1,
+    "derrotas": 2,
+    "golsPro": 2,
+    "golsContra": 6,
+    "saldo": -4,
+    "pontos": 1
+  }
+]

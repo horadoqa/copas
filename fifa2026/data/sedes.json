@@ -1,0 +1,70 @@
+[
+  {
+    "cidade": "Cidade do México",
+    "pais": "México",
+    "estadio": "Estadio Azteca",
+    "capacidade": 87523
+  },
+  {
+    "cidade": "Guadalajara",
+    "pais": "México",
+    "estadio": "Estadio Akron",
+    "capacidade": 48000
+  },
+  {
+    "cidade": "Monterrey",
+    "pais": "México",
+    "estadio": "Estadio BBVA",
+    "capacidade": 53500
+  },
+
+  {
+    "cidade": "New York",
+    "pais": "Estados Unidos",
+    "estadio": "MetLife Stadium",
+    "capacidade": 82500
+  },
+  {
+    "cidade": "Los Angeles",
+    "pais": "Estados Unidos",
+    "estadio": "SoFi Stadium",
+    "capacidade": 70000
+  },
+  {
+    "cidade": "Dallas",
+    "pais": "Estados Unidos",
+    "estadio": "AT&T Stadium",
+    "capacidade": 80000
+  },
+  {
+    "cidade": "Miami",
+    "pais": "Estados Unidos",
+    "estadio": "Hard Rock Stadium",
+    "capacidade": 65000
+  },
+  {
+    "cidade": "Seattle",
+    "pais": "Estados Unidos",
+    "estadio": "Lumen Field",
+    "capacidade": 69000
+  },
+  {
+    "cidade": "Houston",
+    "pais": "Estados Unidos",
+    "estadio": "NRG Stadium",
+    "capacidade": 72000
+  },
+
+  {
+    "cidade": "Toronto",
+    "pais": "Canadá",
+    "estadio": "BMO Field",
+    "capacidade": 45000
+  },
+  {
+    "cidade": "Vancouver",
+    "pais": "Canadá",
+    "estadio": "BC Place",
+    "capacidade": 54000
+  }
+]

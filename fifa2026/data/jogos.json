@@ -1,0 +1,146 @@
+[
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-11",
+    "hora": "18:00",
+    "timeA": "México",
+    "timeB": "Alemanha",
+    "estadio": "Estadio Azteca",
+    "cidade": "Cidade do México"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-11",
+    "hora": "21:00",
+    "timeA": "Brasil",
+    "timeB": "Japão",
+    "estadio": "MetLife Stadium",
+    "cidade": "New York"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-12",
+    "hora": "18:00",
+    "timeA": "Argentina",
+    "timeB": "Coreia do Sul",
+    "estadio": "SoFi Stadium",
+    "cidade": "Los Angeles"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-12",
+    "hora": "21:00",
+    "timeA": "França",
+    "timeB": "Nigéria",
+    "estadio": "AT&T Stadium",
+    "cidade": "Dallas"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-13",
+    "hora": "18:00",
+    "timeA": "Espanha",
+    "timeB": "Marrocos",
+    "estadio": "Hard Rock Stadium",
+    "cidade": "Miami"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-13",
+    "hora": "21:00",
+    "timeA": "Inglaterra",
+    "timeB": "Estados Unidos",
+    "estadio": "Lumen Field",
+    "cidade": "Seattle"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-14",
+    "hora": "18:00",
+    "timeA": "Itália",
+    "timeB": "Austrália",
+    "estadio": "BC Place",
+    "cidade": "Vancouver"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-14",
+    "hora": "21:00",
+    "timeA": "Portugal",
+    "timeB": "Canadá",
+    "estadio": "BMO Field",
+    "cidade": "Toronto"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-15",
+    "hora": "18:00",
+    "timeA": "Uruguai",
+    "timeB": "Egito",
+    "estadio": "Estadio BBVA",
+    "cidade": "Monterrey"
+  },
+  {
+    "fase": "Fase de Grupos",
+    "data": "2026-06-15",
+    "hora": "21:00",
+    "timeA": "Bélgica",
+    "timeB": "Arábia Saudita",
+    "estadio": "NRG Stadium",
+    "cidade": "Houston"
+  },
+  {
+    "fase": "Oitavas de Final",
+    "data": "2026-06-30",
+    "hora": "20:00",
+    "timeA": "Brasil",
+    "timeB": "Alemanha",
+    "estadio": "MetLife Stadium",
+    "cidade": "New York"
+  },
+  {
+    "fase": "Oitavas de Final",
+    "data": "2026-07-01",
+    "hora": "20:00",
+    "timeA": "França",
+    "timeB": "Inglaterra",
+    "estadio": "SoFi Stadium",
+    "cidade": "Los Angeles"
+  },
+  {
+    "fase": "Quartas de Final",
+    "data": "2026-07-05",
+    "hora": "21:00",
+    "timeA": "Brasil",
+    "timeB": "França",
+    "estadio": "AT&T Stadium",
+    "cidade": "Dallas"
+  },
+  {
+    "fase": "Semifinal",
+    "data": "2026-07-09",
+    "hora": "21:00",
+    "timeA": "Argentina",
+    "timeB": "Brasil",
+    "estadio": "MetLife Stadium",
+    "cidade": "New York"
+  },
+  {
+    "fase": "Disputa do 3º Lugar",
+    "data": "2026-07-18",
+    "hora": "18:00",
+    "timeA": "França",
+    "timeB": "Alemanha",
+    "estadio": "Hard Rock Stadium",
+    "cidade": "Miami"
+  },
+  {
+    "fase": "Final",
+    "data": "2026-07-19",
+    "hora": "20:00",
+    "timeA": "Brasil",
+    "timeB": "Argentina",
+    "estadio": "MetLife Stadium",
+    "cidade": "New York"
+  }
+]

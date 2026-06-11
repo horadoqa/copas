@@ -1,0 +1,766 @@
+/* ==================================================
+   FIFA WORLD CUP 2026 - STYLE.CSS
+   Layout Principal
+   ================================================== */
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(
+        135deg,
+        #041c32,
+        #064663,
+        #0b5fa5
+    );
+    color: #ffffff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    line-height: 1.6;
+    /* padding-top: 80px; */
+}
+
+/* =========================
+   VARIÁVEIS
+========================= */
+
+:root {
+    --primary: #00c896;
+    --secondary: #2196f3;
+    --gold: #fbc531;
+
+    --white: #ffffff;
+    --light: #f5f7fa;
+
+    --dark: #07111f;
+    --dark-2: #101827;
+
+    --glass: rgba(255,255,255,0.08);
+    --glass-border: rgba(255,255,255,0.15);
+
+    --shadow:
+        0 12px 30px rgba(0,0,0,0.25);
+
+    --radius: 20px;
+
+    --transition: 0.35s ease;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #081827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 50px;
+}
+
+/* =========================
+   UTILITÁRIOS
+========================= */
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-title p {
+    color: rgba(255,255,255,0.75);
+    max-width: 700px;
+    margin: auto;
+}
+
+.glass {
+    background: var(--glass);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid var(--glass-border);
+
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: var(--transition);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: white;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    color: var(--gold);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle,
+.menu-toggle {
+    border: none;
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.1);
+
+    color: white;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover,
+.menu-toggle:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    background:
+        url("../assets/images/hero.jpg")
+        center center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.75)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.12);
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: auto auto 35px;
+    color: rgba(255,255,255,0.9);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    animation: bounce 2s infinite;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background:
+        linear-gradient(
+            45deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+   CONTADORES
+========================= */
+
+.countdown-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px,1fr));
+
+    gap: 25px;
+}
+
+.countdown-card {
+    padding: 35px;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.countdown-card h3 {
+    margin-bottom: 20px;
+}
+
+.countdown {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+/* =========================
+   FILTROS
+========================= */
+
+.filters {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 15px;
+
+    padding: 25px;
+    border-radius: var(--radius);
+    margin-bottom: 40px;
+}
+
+.filters select,
+.filters input {
+    width: 100%;
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: none;
+    outline: none;
+
+    font-family: inherit;
+}
+
+/* =========================
+   JOGOS
+========================= */
+
+.games-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(330px,1fr));
+
+    gap: 25px;
+}
+
+.game-card {
+    position: relative;
+
+    border-radius: var(--radius);
+
+    padding: 25px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    transition: var(--transition);
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.3);
+}
+
+.game-date {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.game-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.team {
+    text-align: center;
+    flex: 1;
+}
+
+.team img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.vs {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    background: var(--gold);
+    color: #000;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* =========================
+   TABELA
+========================= */
+
+.table-container {
+    border-radius: var(--radius);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: rgba(255,255,255,0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+tbody tr {
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+tbody tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* =========================
+   ESTATÍSTICAS
+========================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 20px;
+}
+
+.stat-card {
+    border-radius: var(--radius);
+
+    padding: 30px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin-bottom: 12px;
+}
+
+.stat-card span {
+    display: block;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: var(--gold);
+}
+
+/* =========================
+   SEDES
+========================= */
+
+.host-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+
+    gap: 25px;
+}
+
+.host-card {
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(15px);
+
+    transition: var(--transition);
+}
+
+.host-card:hover {
+    transform: translateY(-8px);
+}
+
+.host-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.host-content {
+    padding: 20px;
+}
+
+.host-content h3 {
+    margin-bottom: 10px;
+}
+
+.host-content p {
+    color: rgba(255,255,255,0.8);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: rgba(0,0,0,0.3);
+    padding-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap: 30px;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 15px;
+}
+
+.footer a {
+    display: block;
+
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+
+    margin-bottom: 8px;
+}
+
+.footer a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    text-align: center;
+
+    border-top:
+        1px solid rgba(255,255,255,0.1);
+
+    margin-top: 40px;
+    padding: 25px 0;
+}
+
+/* =========================
+   VOLTAR AO TOPO
+========================= */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    font-size: 1.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: #041c32;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+}
+
+.loader {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    border: 6px solid rgba(255,255,255,0.2);
+
+    border-top-color: var(--gold);
+
+    animation: spin 1s linear infinite;
+}
+
+/* =========================
+   ANIMAÇÕES BASE
+========================= */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translate(-50%, -12px);
+    }
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 992px) {
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+
+        top: 80px;
+        right: -100%;
+
+        width: 260px;
+        height: calc(100vh - 80px);
+
+        background: #081827;
+
+        flex-direction: column;
+        align-items: center;
+
+        padding-top: 40px;
+
+        transition: 0.4s;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .countdown {
+        font-size: 1.3rem;
+    }
+}
